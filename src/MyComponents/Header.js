@@ -1,36 +1,27 @@
 import React, { useState } from "react";
-// import clickup from './clickup.png'
-// import * as All from './images'
+
 import Sidebar from "./sidebar.js";
-export default function Header() {
-  
+const Header = () => {
   const [ShowSidebar, setShowsidebar] = useState(false);
 
   const openSidebar = () => {
-    let main = document.querySelector('.container');
-      let nav=document.querySelector('.nav-bar');
+    let main = document.querySelector(".container");
+    let nav = document.querySelector(".nav-bar");
     if (ShowSidebar === false) {
       setShowsidebar(true);
-      
-      nav.style.marginLeft='250px';
-        main.style.marginLeft = '250px';
+
+      nav.style.marginLeft = "250px";
+      main.style.marginLeft = "250px";
     } else {
       setShowsidebar(false);
-      nav.style.marginLeft='initial';
-        main.style.marginLeft = 'initial';
+      nav.style.marginLeft = "initial";
+      main.style.marginLeft = "initial";
     }
   };
 
   return (
     <>
-    <></>
-      <>
-        {ShowSidebar && (
-          <>
-            <Sidebar />
-          </>
-        )}
-      </>
+      {ShowSidebar && <Sidebar />}
 
       <nav className="nav-bar">
         <ul className="list-items">
@@ -50,9 +41,8 @@ export default function Header() {
             View
           </li>
         </ul>
-        </nav> 
-     
-      
+      </nav>
     </>
   );
-}
+};
+export default Header;

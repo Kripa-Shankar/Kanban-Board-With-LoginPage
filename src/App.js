@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./MyComponents/style.css";
+import Loginpage from "./MyComponents/Loginpage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CombinedPage from "./MyComponents/CombinedPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Loginpage />} />
+        <Route path="/CombinedPage" element={<CombinedPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
