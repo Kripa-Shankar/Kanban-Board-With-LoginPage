@@ -12,7 +12,7 @@ This project is a dynamic web application built using React and Redux, featuring
 ## Technologies Used
 - React
 - Redux
-- JavaScript (ES6+)
+- JavaScript 
 - HTML/CSS
 
 ## Usage
